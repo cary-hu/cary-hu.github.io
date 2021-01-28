@@ -7,7 +7,7 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "publish": "git add . && git commit -m add && git push"
+    "publish": "git add . && git commit -m AddArticle && git push"
   },
   "hexo": {
     "version": "5.3.0"
