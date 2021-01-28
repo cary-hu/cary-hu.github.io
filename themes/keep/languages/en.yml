@@ -35,7 +35,7 @@ copyright:
   link: Post link
   create_time: Create time
   license_title: Copyright Notice
-  license_content: "All articles in this blog are owned by the author unless otherwise stated. Please indicate the source!"
+  license_content: All articles in this blog are owned by the author unless otherwise stated. Please indicate the source!
 ago:
   second: "%s seconds ago"
   minute: "%s minutes ago"

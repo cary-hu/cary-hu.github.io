@@ -110,3 +110,13 @@ theme: keep
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+
+# Markdown
+## Docs: https://github.com/hexojs/hexo-renderer-markdown-it/wiki/Advanced-Configuration
+markdown:
+  plugins:
+    - name: 'markdown-it-emoji'
+      options:
+        shortcuts:
+          laughing: ':D'
