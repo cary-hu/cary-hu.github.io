@@ -1,7 +1,8 @@
 ---
 title: YAGNI原则（You aren't gonna need it）
 date: 2021-01-29 19:14:02
-tags:
+tags: 设计模式
+categories: 设计模式
 ---
 
 除了最核心的功能，其他功能一概不要部署，这样来加快开发，他背后的指导思想，就是尽可能快，尽可能简单的让软件运行起来。

@@ -1,7 +1,8 @@
 ---
 title: 合成复用原则(Composite Reuse Principle)
 date: 2021-01-29 19:14:02
-tags:
+tags: 设计模式
+categories: 设计模式
 ---
 
 尽量使用对象的组合，而不是继承来达到复用的目的，类与类之间的关系应该是has-a而不是is-a。

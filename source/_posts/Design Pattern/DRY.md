@@ -1,7 +1,8 @@
 ---
 title: DRY原则(Don't repeat yoursel)
 date: 2021-01-29 19:14:02
-tags:
+tags: 设计模式
+categories: 设计模式
 ---
 
 DRY原则是指在编程过程中不写重复的代码，将公共的部分抽象出来，封装成一个基础类，在使用的时候再进行调用。

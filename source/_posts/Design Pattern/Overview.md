@@ -1,7 +1,9 @@
 ---
 title: 设计模式
 date: 2021-01-29 19:14:02
-tags:
+tags: 设计模式
+categories: 设计模式
+sticky: 999
 ---
 
 设计模式是编程界的前辈们，根据自己对面向对象程序编码开发的经验所总结出来的、解决特定问题的一系列套路，他并不是语法规定，而是一套用来提高提高代码复用率、可维护性、可读性、稳健性以及安全性的解决方案。本次学习基于：<a href="./reference/Design Patterns- Elements of Reusable Object-Oriented Software.pdf">Design Patterns- Elements of Reusable Object-Oriented Software</a>一书，该书由Erich Gamma、Richard Helm、Ralph Johnson、John Vlissides四个人合著，他们四个人被称为Gang of Four，缩写为Gof。这本书介绍了23中设计模式，就是指GoF的23种设计模式。
@@ -9,6 +11,8 @@ tags:
 ## 六大原则 SOLID
 
 所有的设计模式均遵循以下六个基本的设计原则：
+
+{% post_link SRP %}
 
 * [单一职责原则：Single responsibility principle(SRP)](./Design-principles/SRP.md)
 * [开放封闭原则: Open Closed Principle(OCP)](./Design-principles/OCP.md)

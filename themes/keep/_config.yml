@@ -45,7 +45,7 @@ style:
     progress_bar:
       enable: true
     percent:
-      enable: true
+      enable: false
 
 
 # ---------------------------------------------------------------------------------------
@@ -69,7 +69,7 @@ social_contact:
 # ---------------------------------------------------------------------------------------
 menu:
   Home: /
-  Archives: /archives
+  # Archives: /archives
   Categories: /categories
   # Tags: /tags
   # Links: /links
