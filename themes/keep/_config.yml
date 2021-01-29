@@ -4,7 +4,7 @@
 base_info:
   title: Cary Is Awesome
   author: Cary Hu
-  url: https://cary-hu.github.io/blog/
+  url: https://cary-hu.github.io/
 
 
 # ---------------------------------------------------------------------------------------
@@ -21,7 +21,7 @@ style:
   favicon: /images/logo.jpg
 
   # Article image align position, value: left | center
-  article_img_align: left
+  article_img_align: center
 
   # Left side width
   left_side_width: 260px
@@ -31,21 +31,21 @@ style:
 
   # Mouse hover
   hover:
-    shadow: false   # shadow effect when the mouse hover
-    scale: false    # scale effect when the mouse hover
+    shadow: true   # shadow effect when the mouse hover
+    scale: true    # scale effect when the mouse hover
 
   # First screen
   first_screen:
     enable: true
-    background_img: /blog/images/bg.svg   # You can use local image or image external link
+    background_img: /images/bg.svg   # You can use local image or image external link
     description: Keep Coding and Keep Loving.
 
   # Scroll style settings
   scroll:
     progress_bar:
-      enable: false
+      enable: true
     percent:
-      enable: false
+      enable: true
 
 
 # ---------------------------------------------------------------------------------------
@@ -70,10 +70,10 @@ social_contact:
 menu:
   Home: /
   Archives: /archives
-  # Categories: /categories
+  Categories: /categories
   # Tags: /tags
   # Links: /links
-  # About: /about
+  About: /about
   # Changelog: /changelog
   # ......
 
@@ -98,14 +98,14 @@ post:
   # Dependencies: hexo-wordcount (npm install hexo-wordcount)
   # See: https://github.com/willin/hexo-wordcount
   word_count:
-    enable: false
-    wordcount: false  # word count, one article
-    min2read: false   # time to read, one article
+    enable: true
+    wordcount: true  # word count, one article
+    min2read: true   # time to read, one article
 
   # Author label
   author_label:
     enable: true
-    auto: true  # if true, show Lv1, Lv2, Lv3... , If false, show custom label
+    auto: false  # if true, show Lv1, Lv2, Lv3... , If false, show custom label
     # label array item can be one or more
     custom_label_list: [ "Trainee", "Engineer", "Architect", "CTO", "BOSS" ]
 
@@ -184,7 +184,7 @@ comment:
   # See: https://github.com/gitalk/gitalk
   gitalk:
     github_id: cary-hu             # GitHub repo owner
-    repository: blog           # Repository name to store issues
+    repository: cary-hu.github.io           # Repository name to store issues
     client_id: 58f26c69a2c241cacd45            # GitHub Application Client ID
     client_secret: bad5fe03471c2f8b1917001a902b8234ec53fb1f        # GitHub Application Client Secret
 
