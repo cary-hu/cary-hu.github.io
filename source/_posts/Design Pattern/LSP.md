@@ -94,5 +94,3 @@ public class Square : IPolygon
 ## 图例
 
 ![里氏替换原则](/images/DesignPattern/LSP.png)
-
-{% /images/DesignPattern/LSP.png 里氏替换原则 %}
