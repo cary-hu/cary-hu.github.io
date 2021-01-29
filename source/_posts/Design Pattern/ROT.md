@@ -1,7 +1,6 @@
 ---
 title: 三次原则(Rule of three)
 date: 2021-01-29 19:14:02
-tags: 设计模式
 categories: 设计模式
 ---
 

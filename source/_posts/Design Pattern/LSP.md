@@ -1,7 +1,6 @@
 ---
 title: 里氏替换原则(Liskov Substitution Principle(LSP))
 date: 2021-01-29 19:14:02
-tags: 设计模式
 categories: 设计模式
 ---
 

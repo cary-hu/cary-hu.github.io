@@ -1,7 +1,6 @@
 ---
 title: YAGNI原则（You aren't gonna need it）
 date: 2021-01-29 19:14:02
-tags: 设计模式
 categories: 设计模式
 ---
 

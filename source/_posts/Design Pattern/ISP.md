@@ -1,7 +1,6 @@
 ---
 title: 接口隔离原则(Interface Segregation Principle(ISP))
 date: 2021-01-29 19:14:02
-tags: 设计模式
 categories: 设计模式
 ---
 
