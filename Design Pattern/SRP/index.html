@@ -9,17 +9,17 @@
     
     <title>
         
-            test |
+            单一职责原则(Single responsibility principle(SRP)) |
         
         Cary Is Awesome
     </title>
-    <link rel="stylesheet" href="/blog/css/style.css">
-    <link rel="shortcut icon" href="/blog/images/logo.jpg">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/images/logo.jpg">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.0/source/css/font-awesome.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
-    KEEP.hexo_config = {"hostname":"cary-hu.github.io","root":"/blog/","language":"en","path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.jpg","favicon":"/images/logo.jpg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/blog/images/bg.svg","description":"Keep Coding and Keep Loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"trigger":"auto","unescape":false,"preload":true},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.0"};
+    KEEP.hexo_config = {"hostname":"cary-hu.github.io","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.jpg","favicon":"/images/logo.jpg","article_img_align":"center","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep Coding and Keep Loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"trigger":"auto","unescape":false,"preload":true},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.0"};
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days age","week":"%s weeks age","month":"%s months age","year":"%s years age"};
   </script>
 <meta name="generator" content="Hexo 5.3.0"></head>
@@ -27,6 +27,8 @@
 
 <body>
 <div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
     
 
     
@@ -44,7 +46,7 @@
 
     <div class="header-content">
         <div class="left">
-            <a class="logo-title" href="/blog">
+            <a class="logo-title" href="/">
                 Cary Is Awesome
             </a>
         </div>
@@ -55,7 +57,7 @@
                     
                         <li class="menu-item">
                             <a class=""
-                               href="/blog/"
+                               href="/"
                             >
                                 HOME
                             </a>
@@ -63,9 +65,25 @@
                     
                         <li class="menu-item">
                             <a class=""
-                               href="/blog/archives"
+                               href="/archives"
                             >
                                 ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
                             </a>
                         </li>
                     
@@ -92,12 +110,22 @@
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/blog/">HOME</a>
+                       href="/">HOME</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/blog/archives">ARCHIVES</a>
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
                 </li>
             
         </ul>
@@ -119,31 +147,39 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">test</span>
+            <span class="title-hover-animation">单一职责原则(Single responsibility principle(SRP))</span>
         </div>
 
         
             <div class="article-header">
                 <div class="avatar">
-                    <img src="/blog/images/avatar.jpg">
+                    <img src="/images/avatar.jpg">
                 </div>
                 <div class="info">
                     <div class="author">
                         <span class="name">Cary Hu</span>
                         
-                            <span class="author-label">Lv1</span>
+                            <span class="author-label">Engineer</span>
                         
                     </div>
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;2021-01-28 23:14:02
+        <i class="fas fa-edit"></i>&nbsp;2021-01-29 19:14:02
     </span>
     
     
 
     
     
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>500 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>1 Mins</span>
+        </span>
     
     
         <span class="article-pv article-meta-item">
@@ -158,18 +194,38 @@
         
 
         <div class="article-content markdown-body">
-            
+            <p>在设计一个类的时候，应该只有一个引起他变化的原因，且应只完成一个任务（职责），如果一个类有一个以上的职责，那么这些职责就耦合在了一起，这会导致设计出来的代码不够健壮，当某一个职责发生变化的时候，可能会影响到其他的职责，另外，如果多个职责耦合在一起，将会影响到这个类的复用性。</p>
+<h2 id="优点">优点</h2>
+<ul>
+<li>降低类的复杂性，单个类只负责单一的职责，逻辑相比较于负责多职责的类简单</li>
+<li>提高类的可读性，提高代码的可维护性</li>
+<li>提高类的复用性</li>
+<li>降低代码变更带来的风险，修改某一个接口的功能的时候，降低该接口对其他接口功能的影响</li>
+</ul>
+<h2 id="难点">难点</h2>
+<ul>
+<li>职责没有一个量化的标准，在划分单个类的职责时，需要从实际出发，以经验为准，对特定的项目进行特定的分析</li>
+</ul>
+<h2 id="示例">示例</h2>
+<p>假设我现在在做一个学生信息管理系统，现有一个需求，要求提供修改学生基本信息的接口，于是我进行了如下设计：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-function"><span class="hljs-built_in">bool</span> <span class="hljs-title">changeUserInfo</span>(<span class="hljs-params">UserEntity student, <span class="hljs-built_in">string</span> changeOption</span>)</span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-comment">// do something</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p>该方法可以将changeOption中需要修改的参数，在函数体中进行逻辑处理，将其修改到student实体中，但是这样带来的问题就是，方法职责不清晰、不单一，较好的设计应该是，如果需要修改用户名，就调用修改用户名的API，需要修改家庭住址，就调用修改家庭住址的API，修改后的代码如下：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-function"><span class="hljs-built_in">bool</span> <span class="hljs-title">changeUserName</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> name</span>)</span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-comment">// do something</span><br>&#125;<br><span class="hljs-function"><span class="hljs-built_in">bool</span> <span class="hljs-title">changeUserAddress</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> address</span>)</span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-comment">// do something</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p>如此设计，在后期的维护、修改、重构代码将会变得轻而易举，每个方法的职责清晰明确，开发难度也变低了。</p>
+<h2 id="图例">图例</h2>
+<p><img src="/images/DesignPattern/SRP.png" alt="单一职责原则"></p>
+
         </div>
 
         
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：test</li>
+        <li>Post title：单一职责原则(Single responsibility principle(SRP))</li>
         <li>Post author：Cary Hu</li>
-        <li>Create time：2021-01-28 23:14:02</li>
+        <li>Create time：2021-01-29 19:14:02</li>
         <li>
-            Post link：https://cary-hu.github.io/blog/2021/01/28/test/
+            Post link：https://cary-hu.github.io/Design Pattern/SRP/
         </li>
         <li>
             Copyright Notice：All articles in this blog are owned by the author unless otherwise stated. Please indicate the source!
@@ -183,14 +239,29 @@
         
             <div class="article-nav">
                 
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/Design%20Pattern/ROT/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">三次原则(Rule of three)</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/blog/2021/01/28/Emojis-on-Github/"
+                           href="/Design%20Pattern/YAGNI/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Emojis on Github</span>
+                                <span class="post-nav-title-item">YAGNI原则（You aren&#39;t gonna need it）</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -230,7 +301,7 @@
                 Gitalk && new Gitalk({
                     clientID: '58f26c69a2c241cacd45',
                     clientSecret: 'bad5fe03471c2f8b1917001a902b8234ec53fb1f',
-                    repo: 'blog',
+                    repo: 'cary-hu.github.io',
                     owner: 'cary-hu',
                     admin: ['cary-hu'],
                     id: __gitalk__pathname,
@@ -349,10 +420,6 @@
         
 
         
-            <li class="tools-item tool-scroll-to-top flex-center">
-                <i class="fas fa-arrow-up"></i>
-            </li>
-        
 
         <li class="tools-item tool-scroll-to-bottom flex-center">
             <i class="fas fa-arrow-down"></i>
@@ -364,6 +431,11 @@
             <i class="fas fa-cog fa-spin"></i>
         </li>
         
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
     </ul>
 </div>
 
@@ -373,7 +445,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%BE%E7%82%B9"><span class="nav-number">2.</span> <span class="nav-text">难点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E4%BE%8B"><span class="nav-number">4.</span> <span class="nav-text">图例</span></a></li></ol>
     </div>
 </div>
         </aside>
