@@ -1037,8 +1037,8 @@ pre .javascript .function {
 .page-container .page-main-content .page-main-content-middle .main-content {
   position: relative;
   box-sizing: border-box;
-  width: 80%;
-  max-width: 920px;
+  width: 100%;
+  max-width: 1100px;
   height: 100%;
 }
 @media (max-width: 780px) {
@@ -1883,7 +1883,7 @@ pre .javascript .function {
   height: 2px;
   visibility: hidden;
   z-index: 1007;
-  background: var(--primary-color);
+  background: linear-gradient(to right, #e94e65 20%, #15a892 40%, #a89215 60%, #1574a8 80%);
   transition-property: color, background, box-shadow, border-color, width;
   transition-delay: 0s, 0s, 0s, 0s, 0s;
   transition-duration: 0.2s, 0.2s, 0.2s, 0.2s, 0.1s;
@@ -1909,8 +1909,8 @@ pre .javascript .function {
 .header-wrapper .header-content {
   position: relative;
   height: 100%;
-  width: 80%;
-  max-width: 920px;
+  width: 100%;
+  max-width: 1100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1918,7 +1918,7 @@ pre .javascript .function {
   z-index: 1005;
 }
 .header-wrapper .header-content.has-first-screen {
-  max-width: 1104px;
+  max-width: 1320px;
 }
 @media (max-width: 780px) {
   .header-wrapper .header-content {
