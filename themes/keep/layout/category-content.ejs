@@ -4,10 +4,39 @@
             <i class="fas fa-folder"></i>&nbsp;<%= page.category %>
         </div>
         <div class="category-post-list">
-            <%- partial('_partial/archive-list', {posts_new: page.posts}) %>
+            <div class="home-content-container">
+                <ul class="home-article-list">
+                    <% page.posts.forEach(post => { %>
+                        <li class="home-article-item">
+            
+                            <% if (post.sticky) { %>
+                                <i class="fas fa-thumbtack top-icon"></i>
+                            <% } %>
+            
+                            <h3 class="home-article-title">
+                                <a href="<%- url_for(post.path) %>">
+                                    <%= post.title %>
+                                </a>
+                            </h3>
+            
+                            <div class="home-article-content markdown-body">
+                                <% if (post.excerpt) { %>
+                                    <%- post.excerpt %>
+                                <% } else { %>
+                                    <%- truncate(strip_html(post.content), {length: 128}) %>
+                                <% } %>
+                            </div>
+            
+                            <%- partial('_partial/home-article-meta-info', {post: post}) %>
+                        </li>
+                    <% }) %>
+                </ul>
+            
+                <div class="home-paginator">
+                    <%- partial('_partial/paginator', {pageObject: page}) %>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="category-paginator">
-        <%- partial('_partial/paginator', {pageObject: page}) %>
-    </div>
 </div>
+
