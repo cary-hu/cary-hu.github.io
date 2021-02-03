@@ -66,4 +66,4 @@ public interface ITemperamentBeauty
 
 ## 图例
 
-![接口隔离原则](/images/DesignPattern/ISP.png)
+![接口隔离原则](https://cdn.jsdelivr.net/gh/cary-hu/blog-image@master/DesignPattern/ISP.png)

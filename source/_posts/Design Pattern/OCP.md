@@ -72,4 +72,4 @@ class Divide : ICalculator
 
 ## 图例
 
-![开放封闭原则](/images/DesignPattern/OCP.png)
+![开放封闭原则](https://cdn.jsdelivr.net/gh/cary-hu/blog-image@master/DesignPattern/OCP.png)

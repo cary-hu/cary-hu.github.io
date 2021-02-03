@@ -45,4 +45,4 @@ bool changeUserAddress(string address)
 
 ## 图例
 
-![单一职责原则](/images/DesignPattern/SRP.png)
+![单一职责原则](https://cdn.jsdelivr.net/gh/cary-hu/blog-image@master/DesignPattern/SRP.png)

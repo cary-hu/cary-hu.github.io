@@ -83,4 +83,4 @@ public class ComputerControl()
 
 ## 图例
 
-![依赖倒置原则](/images/DesignPattern/DIP.png)
+![依赖倒置原则](https://cdn.jsdelivr.net/gh/cary-hu/blog-image@master/DesignPattern/DIP.png)

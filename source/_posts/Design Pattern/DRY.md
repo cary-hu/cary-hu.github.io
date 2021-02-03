@@ -57,4 +57,4 @@ public string GetBody(string url)
 
 ## 图例
 
-![DRY原则原则](/images/DesignPattern/DRY.jpg)
+![DRY原则原则](https://cdn.jsdelivr.net/gh/cary-hu/blog-image@master/DesignPattern/DRY.jpg)
