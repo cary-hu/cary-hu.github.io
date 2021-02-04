@@ -9,7 +9,7 @@
     
     <title>
         
-            迪米特法则(Law of Demeter(LD)) |
+            Poem Excerpts |
         
         Cary Is Awesome
     </title>
@@ -134,7 +134,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">迪米特法则(Law of Demeter(LD))</span>
+            <span class="title-hover-animation">Poem Excerpts</span>
         </div>
 
         
@@ -152,7 +152,7 @@
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;2021-01-29 19:14:02
+        <i class="fas fa-edit"></i>&nbsp;2021-02-04 19:33:41
     </span>
     
         <span class="article-categories article-meta-item">
@@ -160,7 +160,11 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>&nbsp;
+                        <a href="/categories/%E6%96%87%E8%89%BA/">文艺</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E6%96%87%E8%89%BA/%E5%8F%A5%E5%AD%90/">句子</a>&nbsp;
                     </li>
                 
             </ul>
@@ -171,12 +175,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>419 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>823 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>2 Mins</span>
         </span>
     
     
@@ -192,22 +196,109 @@
         
 
         <div class="article-content markdown-body">
-            <p>迪米特法则的意义在于降低类之间的耦合，它要求一个对象应该对其他对象有最少的了解（也就是说，设计的每个类、每个功能点应该相对独立，互相之间不存在或者说很少有依赖关系）。在实践中，通常采用只暴露必须要暴露的方法，来保证迪米特法则，其他一些不必要暴露的方法，全都设置为私有方法，不允许外部类使用和查看。以此降低两个类之间的耦合。</p>
-<h2 id="优点">优点</h2>
-<ul>
-<li>提高了类的复用性</li>
-<li>降低了类变更的风险</li>
-</ul>
-<h2 id="难点">难点</h2>
-<ul>
-<li>采用该法则应当适度，解耦是有限度的，要根据经验来避免过犹不及。</li>
-</ul>
-<h2 id="示例">示例</h2>
-<p>现有一个场景，一个男人要煮咖啡，现有两个类，分别是咖啡机和这个男人，代码如下：</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">CoffeeMachine</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AddCoffeeBean</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function"></span>    &#123;<br>        <span class="hljs-comment">// do something</span><br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AddWater</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function"></span>    &#123;<br>        <span class="hljs-comment">// do something</span><br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">StartMachine</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function"></span>    &#123;<br>        <span class="hljs-comment">// do something</span><br>    &#125;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Man</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MakeCoffee</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function"></span>    &#123;<br>        CoffeeMachine coffeeMachine = <span class="hljs-keyword">new</span> CoffeeMachine()&#123; &#125;;<br>        coffeeMachine.AddCoffeeBean();<br>        coffeeMachine.AddWater();<br>        coffeeMachine.StartMachine();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>在以上代码中，男人对于咖啡机内部的方法了解过多，其实他并不用关注这些具体的过程，所以将代码进行优化：</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">CoffeeMachine</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MakeCoffee</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function"></span>    &#123;<br>        AddCoffeeBean();<br>        AddWater();<br>        StartMachine();<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AddCoffeeBean</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function"></span>    &#123;<br>        <span class="hljs-comment">// do something</span><br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AddWater</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function"></span>    &#123;<br>        <span class="hljs-comment">// do something</span><br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">StartMachine</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function"></span>    &#123;<br>        <span class="hljs-comment">// do something</span><br>    &#125;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Man</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MakeCoffee</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function"></span>    &#123;<br>        CoffeeMachine coffeeMachine = <span class="hljs-keyword">new</span> CoffeeMachine()&#123; &#125;;<br>        coffeeMachine.MakeCoffee();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>这样修改了之后，暴露给男人的接口变少，减少了男人类对咖啡机类的了解，降低了它们之间的耦合。</p>
+            <blockquote>
+<p>何宝莱说:不如我们从头来过。</p>
+</blockquote>
+<a id="more"></a>
+<blockquote>
+<p>山有木兮木有枝，心悦君兮君不知。-《越人歌》</p>
+</blockquote>
+<blockquote>
+<p>春水初生，春林初盛,春风十里，不如你。-冯唐《三十六大》</p>
+</blockquote>
+<blockquote>
+<p>玲珑骰子安红豆，入骨相思知不知?-温庭筠 《南歌子》</p>
+</blockquote>
+<blockquote>
+<p>我行过许多地方的桥，看过许多次数的云，喝过许多种类的酒，却只爱过一个正当最好年龄的人。-沈从文 《湘行散记》</p>
+</blockquote>
+<blockquote>
+<p>纵然万劫不复，纵然相思入骨，我也待你眉眼如初，岁月如故。一一璎珞玉儿 《没有因为没有所以》</p>
+</blockquote>
+<blockquote>
+<p>上邪，我欲与君相知，长命无绝衰。山无陵，江水为竭。冬雷震震，夏雨雪。天地合，乃敢与君绝。–《上邪》</p>
+</blockquote>
+<blockquote>
+<p>两姓联姻，一堂缔约，良缘永结，匹配同称。看此曰桃花灼灼，宜室宜家，卜他年瓜瓞绵绵，尔昌尔炽。谨以白头之约，书向鸿笺,好将红叶之盟，载明鸳谱。</p>
+</blockquote>
+<blockquote>
+<p>贾宝玉对林黛玉说:“任凭千弱水，我只取-瓢饮。”?</p>
+</blockquote>
+<blockquote>
+<p>愿有岁月可回首，且以深情共白头。:-一《和花和月长少年》</p>
+</blockquote>
+<blockquote>
+<p>青梅枯萎，竹马老去，从此我爱的人都像你。–《竹马翻译官》</p>
+</blockquote>
+<blockquote>
+<p>雨声潺潺，像住在溪边，宁愿天天下雨，以为你是因为下雨不来。一一张爱玲《小团圆》</p>
+</blockquote>
+<blockquote>
+<p>为你，千千万万遍。–《追风筝的人》</p>
+</blockquote>
+<blockquote>
+<p>陌上花开，可缓缓归矣。一一吴越王写给夫人的信</p>
+</blockquote>
+<blockquote>
+<p>斯人若彩虹，遇上方知有。–《怦然心动》</p>
+</blockquote>
+<blockquote>
+<p>还君明珠双泪垂,恨不相逢未嫁时。一一张籍《节妇吟》</p>
+</blockquote>
+<blockquote>
+<p>有生之年，狭路相逢,终不能幸免。一一王菲《流年》</p>
+</blockquote>
+<blockquote>
+<p>此去经年，应是良辰美景虚设。便纵有千种风情,更与何人说。一一柳永《雨霖铃》</p>
+</blockquote>
+<blockquote>
+<p>与我捻熄灯，同我书半生。问我粥可温，同我立黄昏。–改自《墨绪》</p>
+</blockquote>
+<blockquote>
+<p>南风过境/梦至西洲<br>
+“海水梦悠悠，君愁我亦愁。南风知我意，吹梦到西洲”<br>
+――出自 南朝乐府民歌《西洲曲》</p>
+</blockquote>
+<blockquote>
+<p>江上酒/故人倾<br>
+“回头双鬓已星星，谁知江上酒，还与故人倾”<br>
+――出自 南宋·周紫芝《临江仙·送光州曾使君》</p>
+</blockquote>
+<blockquote>
+<p>三山时春/四水常在<br>
+“三山撑四水，四水绕三山，三山四水常在，四水三山四时春”<br>
+――出自 绕口令《三山撑四水》</p>
+</blockquote>
+<blockquote>
+<p>西南风/入君怀<br>
+“愿为西南风，长逝入君怀。君怀良不开，贱妾当何依。”<br>
+――出自 三国·曹植《明月上高楼》</p>
+</blockquote>
+<blockquote>
+<p>因风皱面/为雪白头<br>
+“绿水本无忧，因风皱面。青山原不老，为雪白头。”<br>
+――出自 清·李文甫的一副对联（存疑）</p>
+</blockquote>
+<blockquote>
+<p>双丝网/千千结<br>
+“天不老，情难绝。心似双丝网，中有千千结。”<br>
+――出自 北宋·张先《千秋岁·数声鶗鴂》</p>
+</blockquote>
+<blockquote>
+<p>池鱼/故渊<br>
+“误落尘网中，一去三十年。羁鸟恋旧林，池鱼思故渊。”<br>
+――出自 东晋·陶渊明《归园田居》</p>
+</blockquote>
+<blockquote>
+<p>山有色/水无声<br>
+“远看山有色，近听水无声。春去花还在，人来鸟不惊。”<br>
+――出自 唐·王维《画》</p>
+</blockquote>
+<blockquote>
+<p>枫林晚/二月花<br>
+“远上寒山石径斜，白云生处有人家。停车坐爱枫林晚，霜叶红于二月花。”<br>
+――出自 唐·杜牧《山行》</p>
+</blockquote>
 
         </div>
 
@@ -215,11 +306,11 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：迪米特法则(Law of Demeter(LD))</li>
+        <li>Post title：Poem Excerpts</li>
         <li>Post author：Cary Hu</li>
-        <li>Create time：2021-01-29 19:14:02</li>
+        <li>Create time：2021-02-04 19:33:41</li>
         <li>
-            Post link：https://cary-hu.github.io/Design Pattern/LD/
+            Post link：https://cary-hu.github.io/Beautiful Sentence/Poem-Excerpts/
         </li>
         <li>
             Copyright Notice：All articles in this blog are owned by the author unless otherwise stated. Please indicate the source!
@@ -236,13 +327,13 @@
                     <div class="article-prev">
                         <a class="prev"
                            rel="prev"
-                           href="/Design%20Pattern/ISP/"
+                           href="/Beautiful%20Sentence/Just-Sentence/"
                         >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">接口隔离原则(Interface Segregation Principle(ISP))</span>
+                                <span class="post-nav-title-item">Just Sentence</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -252,10 +343,10 @@
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/Design%20Pattern/LSP/"
+                           href="/Beautiful%20Sentence/What%20is%20Special/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">里氏替换原则(Liskov Substitution Principle(LSP))</span>
+                                <span class="post-nav-title-item">What is Special</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -438,7 +529,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%BE%E7%82%B9"><span class="nav-number">2.</span> <span class="nav-text">难点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">示例</span></a></li></ol>
+        
     </div>
 </div>
         </aside>

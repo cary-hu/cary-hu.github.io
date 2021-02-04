@@ -9,7 +9,7 @@
     
     <title>
         
-            迪米特法则(Law of Demeter(LD)) |
+            毕业后的同学聚会，让我哭了一宿 |
         
         Cary Is Awesome
     </title>
@@ -134,7 +134,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">迪米特法则(Law of Demeter(LD))</span>
+            <span class="title-hover-animation">毕业后的同学聚会，让我哭了一宿</span>
         </div>
 
         
@@ -152,7 +152,7 @@
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;2021-01-29 19:14:02
+        <i class="fas fa-edit"></i>&nbsp;2021-02-04 19:41:37
     </span>
     
         <span class="article-categories article-meta-item">
@@ -160,7 +160,11 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>&nbsp;
+                        <a href="/categories/%E6%96%87%E8%89%BA/">文艺</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E6%96%87%E8%89%BA/%E6%96%87%E7%AB%A0/">文章</a>&nbsp;
                     </li>
                 
             </ul>
@@ -171,12 +175,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>419 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.5k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>5 Mins</span>
         </span>
     
     
@@ -192,22 +196,56 @@
         
 
         <div class="article-content markdown-body">
-            <p>迪米特法则的意义在于降低类之间的耦合，它要求一个对象应该对其他对象有最少的了解（也就是说，设计的每个类、每个功能点应该相对独立，互相之间不存在或者说很少有依赖关系）。在实践中，通常采用只暴露必须要暴露的方法，来保证迪米特法则，其他一些不必要暴露的方法，全都设置为私有方法，不允许外部类使用和查看。以此降低两个类之间的耦合。</p>
-<h2 id="优点">优点</h2>
+            <p>有人说同学会是名利场，毕业后就不想再参加，在批判的背后，我们透过表象也可以看到，毕业几年后，人与人之间的差距越来越大。很多人疑问：“我们在大学时明明差不多，为什么他现在却比我厉害那么多？”其实明明差很多，只是你眼界太窄，没看到。</p>
+<a id="more"></a>
+<p>文 | 怀左同学</p>
 <ul>
-<li>提高了类的复用性</li>
-<li>降低了类变更的风险</li>
+<li>1 -</li>
 </ul>
-<h2 id="难点">难点</h2>
+<p>学校单一的评判模式，掩盖了很多立体式的差距，所以当你只知道用学习成绩去衡量别人时，成绩再好点，你可能觉得自己天下无敌了。</p>
+<p>其实这就像和人打架，当你埋头苦练到可以开砖碎石，觉得信心满满然后去挑战对手时，却赫然发现了对方手里的AK47。</p>
+<p>明白了，原来我们的努力，一直不在一个层次上。当我的手上练出老茧时，你已经拥有了一支军队。</p>
+<p>活生生的例子，身边比比皆是。</p>
+<p>之前我在文章中提到了毕业后开公司的学长，因为他在大学时并不喜欢自己的专业，又常常逃课外出参加活动，所以学习成绩很一般。</p>
+<p>记得他创办文学社时，本专业还有一位学长阻止我参加：“那个人我知道，没什么真才实学，成绩也很烂，他就是为了赚你的社费。”</p>
+<p>但我还是去了，因为我很喜欢文学社的名字——“初雪”。那是我写作之路的开始，作为社长的他，经常给我批改文章，教我社会礼仪，带我和老师吃饭，还让我当上了第二届社长。</p>
+<p>他只比我大了一岁，但我有点怕他，也非常尊敬他。他和同龄人总是那么不一样，敢想敢做，在大三时，就成立了自己的团队，做报纸，出书，认识了很多名人。</p>
+<p>他说：读大学，成绩不是最主要的，找到自己的方向，把眼光放长远，踏踏实实把事情做好，这才是最重要的。</p>
+<p>他做了，自己创业，买房买车，红红火火。</p>
 <ul>
-<li>采用该法则应当适度，解耦是有限度的，要根据经验来避免过犹不及。</li>
+<li>2 -</li>
 </ul>
-<h2 id="示例">示例</h2>
-<p>现有一个场景，一个男人要煮咖啡，现有两个类，分别是咖啡机和这个男人，代码如下：</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">CoffeeMachine</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AddCoffeeBean</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function"></span>    &#123;<br>        <span class="hljs-comment">// do something</span><br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AddWater</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function"></span>    &#123;<br>        <span class="hljs-comment">// do something</span><br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">StartMachine</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function"></span>    &#123;<br>        <span class="hljs-comment">// do something</span><br>    &#125;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Man</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MakeCoffee</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function"></span>    &#123;<br>        CoffeeMachine coffeeMachine = <span class="hljs-keyword">new</span> CoffeeMachine()&#123; &#125;;<br>        coffeeMachine.AddCoffeeBean();<br>        coffeeMachine.AddWater();<br>        coffeeMachine.StartMachine();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>在以上代码中，男人对于咖啡机内部的方法了解过多，其实他并不用关注这些具体的过程，所以将代码进行优化：</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">CoffeeMachine</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MakeCoffee</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function"></span>    &#123;<br>        AddCoffeeBean();<br>        AddWater();<br>        StartMachine();<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AddCoffeeBean</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function"></span>    &#123;<br>        <span class="hljs-comment">// do something</span><br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AddWater</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function"></span>    &#123;<br>        <span class="hljs-comment">// do something</span><br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">StartMachine</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function"></span>    &#123;<br>        <span class="hljs-comment">// do something</span><br>    &#125;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Man</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MakeCoffee</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function"></span>    &#123;<br>        CoffeeMachine coffeeMachine = <span class="hljs-keyword">new</span> CoffeeMachine()&#123; &#125;;<br>        coffeeMachine.MakeCoffee();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>这样修改了之后，暴露给男人的接口变少，减少了男人类对咖啡机类的了解，降低了它们之间的耦合。</p>
+<p>细细想来，决定人与人之间差距的因素有很多，抛开我们不可控的家庭因素，对我们影响更多的，其实是我们的格局和眼界。</p>
+<p>这其实也是努力的一种表现，不是身体的瞎使劲，而是大脑的灵活运用。</p>
+<p>眼界决定境界，格局决定结局，我现在越来越相信这句话，因为不同层次的努力，直接导致了不同的结果。</p>
+<p>想起了以前在书本上看到的央视记者和一个西北放羊娃的对话。</p>
+<p>“你每天干什么？”“放羊。”“放羊为了什么？”“挣钱。”“挣了钱呢？”“娶媳妇。”“娶了媳妇呢？”“生娃。”“生了娃，让他干什么？”“放羊。”……</p>
+<p>当时我当笑话看的一段对话，现在再看，触目惊心，原来这也是现在很多在校大学生的写照。</p>
+<p>“你上大学是为了什么？”“找工作。”“找工作干什么？”“挣钱。”“挣了钱呢？”“买车买房娶媳妇”“娶了媳妇呢？”……“培养孩子上大学。”</p>
+<p>思维和认识上的差距，会决定我们的行动方向，也就是说，现在你和小伙伴同在一所高校，之后的几年，很可能你们的差距，是指数式的。</p>
+<p>他年薪百万时，你在备考第五次公务员。</p>
+<p>他忙着给员工发年终奖时，你在组织身边人抢几块钱的红包。</p>
+<p>曾经，你觉得，他不如你。</p>
+<ul>
+<li>3 -</li>
+</ul>
+<p>别人说，毕业五年后，你和同学的差距，天翻地覆。虽然我现在身边还没有年薪百万以上的同学，但量变而引起的质变，正在一点点发生。</p>
+<p>朋友圈有五千人，每天展现的，是各式人生。</p>
+<p>有人在国外攻读学位，有人的创业公司正在起步，有人成了蒸蒸日上的自媒体大咖，有人周游世界照片一张张发……</p>
+<p>当然，这只是一部分，还有更多的大学生在抱怨英语四级太难，抱怨宿舍氛围太差，抱怨没人陪着打王者，抱怨平时的假期太短。</p>
+<p>总是在追问读书的意义，总是在随大流东奔西走，恍恍惚惚，懒懒散散，四年其实很容易就过去了。</p>
+<p>再后来，就成了完全随大流的人生，差不多的工作，差不多的生活，直到某一天看到了远超自己的同学，尴尬地笑笑，然后回家吐槽：这世界真特么不公平！</p>
+<p>你根本不知道他读了几本书，不知道他为了目标可以多拼命，不知道他的特立独行，不知道他的卓识远见。你只看到了当时你们差不多，和后来的差好多。</p>
+<p>他把读书当成了每天的习惯，疯狂地汲取着各类知识；他清清楚楚地知道自己想要的什么，用你根本想象不到的努力在一直坚持着；他知道什么是长远利益，什么是格局和胸襟，他也许偏执，但他活成了你梦想中的样子。</p>
+<p>这样的人，他总失败，因为他一直在追求卓越；而你，总“成功”，因为你从来都没有投入斗争。</p>
+<p>直到你后来仰着头，都没有看清他的身影。</p>
+<p>· · ·</p>
+<p>未来的五到十年，你将被同学甩出老远，那么，现在的你，在做着什么？</p>
+<p>是不是在忙着玩手机，打游戏，睡懒觉，随大流，已经完全做好了被超越的准备，将所有的所有，解释为“不公平”三个字。</p>
+<p>挺好的，这就是你的一贯作风。</p>
+<p>想起了王小波笔下的那只特立独行的猪。</p>
+<p>“我倒是见过很多想要设置别人生活的人，还有对被设置的生活安之若素的人。”</p>
+<p>所以他怀念那只猪。</p>
 
         </div>
 
@@ -215,11 +253,11 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：迪米特法则(Law of Demeter(LD))</li>
+        <li>Post title：毕业后的同学聚会，让我哭了一宿</li>
         <li>Post author：Cary Hu</li>
-        <li>Create time：2021-01-29 19:14:02</li>
+        <li>Create time：2021-02-04 19:41:37</li>
         <li>
-            Post link：https://cary-hu.github.io/Design Pattern/LD/
+            Post link：https://cary-hu.github.io/Article/毕业后的同学聚会，让我哭了一宿/
         </li>
         <li>
             Copyright Notice：All articles in this blog are owned by the author unless otherwise stated. Please indicate the source!
@@ -233,29 +271,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/Design%20Pattern/ISP/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">接口隔离原则(Interface Segregation Principle(ISP))</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/Design%20Pattern/LSP/"
+                           href="/Beautiful%20Sentence/Just-Sentence/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">里氏替换原则(Liskov Substitution Principle(LSP))</span>
+                                <span class="post-nav-title-item">Just Sentence</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -438,7 +461,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%BE%E7%82%B9"><span class="nav-number">2.</span> <span class="nav-text">难点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">示例</span></a></li></ol>
+        
     </div>
 </div>
         </aside>
