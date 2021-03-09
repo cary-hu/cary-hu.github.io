@@ -1,7 +1,7 @@
 ---
 title: spring-learn
 date: 2021-03-08 21:11:47
-categories: Java Learn
+categories: [Java Learn, spring]
 ---
 
 Spring Learning
