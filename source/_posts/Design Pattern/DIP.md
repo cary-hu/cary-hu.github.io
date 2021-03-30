@@ -2,6 +2,7 @@
 title: 依赖倒置原则(Dependency Inversion Principle(DIP))
 date: 2021-01-29 19:14:02
 categories: 设计模式
+modified: 2021-02-04 19:41:37
 ---
 
 该原则的定义为：1. 上层模块不应该依赖于底层模块，他们应该依赖于抽象。 2. 抽象不应该依赖于细节，细节应该依赖于抽象
