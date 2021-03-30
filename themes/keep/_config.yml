@@ -122,7 +122,7 @@ code_copy:
 # Table of Contents in the Sidebar
 # ---------------------------------------------------------------------------------------
 toc:
-  enable: true
+  enable: false
 
   # Automatically add list number to toc.
   number: true
