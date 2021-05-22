@@ -120,3 +120,6 @@ markdown:
       options:
         shortcuts:
           laughing: ':D'
+# Security
+encrypt:
+    enable: true
