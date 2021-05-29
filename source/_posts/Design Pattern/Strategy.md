@@ -1,8 +1,8 @@
 ---
-title: StrategyPattern
+title: Strategy
 date: 2021-05-27 20:21:16
 categories: 设计模式
-modified: 2021-02-04 19:41:37
+modified: 2021-05-27 20:41:37
 ---
 
 将实现和对象本身解耦，这将让对象的拓展更加方便！
